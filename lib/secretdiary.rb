@@ -1,16 +1,12 @@
+require_relative 'key'
+
 class SecretDiary
+
+  attr_reader :locked
 
   def initialize
     @locked = true
     @diary = {}
-  end
-
-  def unlock
-    @locked = false
-  end
-
-  def lock
-    @locked = true
   end
 
   def add_entry(day, note)
